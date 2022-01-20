@@ -1,5 +1,11 @@
 # pw_images
-Web App em Django com operações CRUD de imagens
+* **Descrição:** Web App em Django com operações CRUD de imagens
+* **Requisitos:**
+   * na consola, clonar projeto usando comando `git clone https://github.com/ULHT-PW-2020-21/pw-images`
+   * criar ambiente virtual com `python -m virtualenv venv`
+   * ativar o ambiente virtual lançar a aplicação com  `venv\Scripts\activate`
+   * executar `python -m pip install -r requirements.txt` para instalar os packages necessários
+   * lançar a aplicação com `python manage.py runserver`
 
 ### Scripts no terminal
 ```bash
@@ -11,10 +17,14 @@ pip install django
 django-admin startproject config .
 py manage.py startapp pictures
 pip install django-cloudinary-storage
-pip install Pillow  (para usar ImageField)
+pip install Pillow
+pip > freeze requirements.txt 
 ```
 
-usamos package [django-cloudinary-storage](https://github.com/klis87/django-cloudinary-storage) que permite usar ImageField que guardam a imagem em Cloudinary
+notas:
+* usamos package [django-cloudinary-storage](https://github.com/klis87/django-cloudinary-storage) que permite usar ImageField que guardam a imagem em Cloudinary
+* Pillow permite usar ImageField
+* guarda-se em requirements.txt os packages instalados em [venv](https://docs.python.org/3/tutorial/venv.html). 
 
 ### Conta em [cloudinary.com](https://cloudinary.com/)
 * criar conta em cloudinary 
