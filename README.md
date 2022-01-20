@@ -3,6 +3,7 @@
    * Web App em Django que permite inserir, listar e destruir imagens numa base de dados, através de operações CRUD.
    * Alojamento de fotografias em Cloudinary
    * Utilização do package django-cloudinary-storage
+   * use a pasta barcos com fotografias de barcos para carregar a sua aplicação
 
 ### Requisitos
    * na consola, clonar projeto usando comando `git clone https://github.com/ULHT-PW-2020-21/pw-images`
@@ -161,6 +162,31 @@ def upload(request):
     form = PictureForm()
     ctx = {'form': form}
     return render(request, 'media/upload.html', ctx)
+```
+
+### upload.hyml
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture</title>
+</head>
+<body>
+    {% load cloudinary %}
+
+    <h2>Upload image</h2>
+    <form method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <div>
+            <br>
+            <input type="submit" value="upload image">
+        </div>
+    </form>
+</body>
+</html>
 ```
 
 
