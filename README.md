@@ -1,19 +1,19 @@
-# pw_images
-* **Descrição:** 
-   * Web App em Django "galeria de fotografias". 
-   * Permite inserir, listar e apagar imagens, com operações CRUD na base de dados.
+# Galeria de fotografias pw_images
+### Descrição 
+   * Web App em Django que permite inserir, listar e destruir imagens numa base de dados, através de operações CRUD.
    * Alojamento de fotografias em Cloudinary
    * Utilização do package django-cloudinary-storage
-* **Requisitos:**
+
+### Requisitos
    * na consola, clonar projeto usando comando `git clone https://github.com/ULHT-PW-2020-21/pw-images`
-   * criar ambiente virtual com `python -m virtualenv venv`
-   * ativar o ambiente virtual lançar a aplicação com  `venv\Scripts\activate`
-   * executar `python -m pip install -r requirements.txt` para instalar os packages necessários
-   * lançar a aplicação com `python manage.py runserver`
+   * criar ambiente virtual com comando `python -m virtualenv venv`
+   * ativar o ambiente virtual com comando  `venv\Scripts\activate`
+   * instalar os packages necessários executando comando `python -m pip install -r requirements.txt`
+   * lançar a aplicação com comando `python manage.py runserver`
 
 # Preparativos
 ### Scripts no terminal
-```bash
+```console
 mkdir project_pictures
 cd project_pictures
 python -m virtualenv venv
@@ -78,7 +78,7 @@ class Picture(models.Model):
 registar no admin o modelo Picture para podermos manipular na app admin
 
 ### terminal
-```bash
+```console
 py manage.py makemigrations
 py manage.py migrate
 py manage.py createsuperuser
