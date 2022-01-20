@@ -164,7 +164,7 @@ def upload(request):
     return render(request, 'media/upload.html', ctx)
 ```
 
-### upload.hyml
+### upload.html
 
 ```html
 <!DOCTYPE html>
@@ -174,8 +174,6 @@ def upload(request):
     <title>Picture</title>
 </head>
 <body>
-    {% load cloudinary %}
-
     <h2>Upload image</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
