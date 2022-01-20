@@ -1,4 +1,5 @@
 # pw_images
+Web App em Django com operações CRUD de imagens
 
 ### Scripts no terminal
 ```bash
