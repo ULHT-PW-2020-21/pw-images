@@ -1,5 +1,9 @@
 # pw_images
-* **Descrição:** Web App em Django com operações CRUD de imagens
+* **Descrição:** 
+   * Web App em Django "galeria de fotografias". 
+   * Permite inserir, listar e apagar imagens, com operações CRUD na base de dados.
+   * Alojamento de fotografias em Cloudinary
+   * Utilização do package django-cloudinary-storage
 * **Requisitos:**
    * na consola, clonar projeto usando comando `git clone https://github.com/ULHT-PW-2020-21/pw-images`
    * criar ambiente virtual com `python -m virtualenv venv`
@@ -7,6 +11,7 @@
    * executar `python -m pip install -r requirements.txt` para instalar os packages necessários
    * lançar a aplicação com `python manage.py runserver`
 
+# Preparativos
 ### Scripts no terminal
 ```bash
 mkdir project_pictures
@@ -26,13 +31,12 @@ notas:
 * Pillow permite usar ImageField
 * guarda-se em requirements.txt os packages instalados em [venv](https://docs.python.org/3/tutorial/venv.html). 
 
-### Conta em [cloudinary.com](https://cloudinary.com/)
+### Criação de conta em [cloudinary.com](https://cloudinary.com/)
 * criar conta em cloudinary 
 * product: programmable media
 * ir a dashboard onde se visualizam as configurações
 
 ### settings.py 
-
 * em INSTALLED_APPS, adicionar 
 ```Python
 INSTALLED_APPS += [
@@ -57,9 +61,11 @@ MEDIA_URL = '/<nome da aplicaçao>/'
 
 DEFAULT_FILE_STORAGE = 'cloudinary_storage.storage.MediaCloudinaryStorage'
 ```
+# Criação de classe Picture
+
 ### models.py
 
-criar classe para as imagens usando ImageField e especificando nome da pasta (dentro da pasta especificada em MEDIA_URL) onde queremos guardar as imagens
+criar classe `Picture` para as imagens, usando ImageField e especificando o nome da pasta no cloudinary onde as imagens devem ser guardadas (dentro da pasta especificada em MEDIA_URL)
 ```Python
 from django.db import models
 
@@ -81,9 +87,11 @@ py manage.py createsuperuser
 ### aplicação admin
 
 * abrir aplicação admin, em 127.0.0.1/admin
-* carregar fotos
+* criar/carregar algumas fotos através do modo admin
 * ver que no cloudinary ficaram carregadas. 
-* se, no model,  mudarmos o valor de upload_to, será criada uma nova pasta
+* se, no model, mudarmos o valor de `upload_to` no `ImageField`, no cloudinary será criada uma nova pasta com esse nome
+
+# Consulta de elementos da base de dados (Read)
 
 ### views.py
 
@@ -110,7 +118,6 @@ def index(request):
 </body>
 ```
 
-
 ### urls.py
 * no config/urls.py, associamos à rota '' os urls de media.urls
     path('', include('media.urls'))
@@ -125,6 +132,7 @@ urlpatterns = [
 ]
 ```
 
+# Criação de novo elemento na base de dados (Create)
 
 ### forms.py
 criar formulário para nova imagem 
@@ -163,6 +171,8 @@ urlpatterns += [
     path('load/', views.load, name='load')
 ]
 ```
+
+# Destruição de elemento da base de dados (Delete)
 
 ### index.html
 colocar no final das fotos, um link para carregar imagens
