@@ -29,3 +29,9 @@ def delete(request, picture_pk):
     picture.delete()
     return redirect(reverse('media:index'))
 
+
+def picture(request, picture_pk):
+    picture = Picture.objects.get(pk=picture_pk)
+    ctx = {'picture': picture}
+    return render(request, 'media/picture.html', ctx)
+

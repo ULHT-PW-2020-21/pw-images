@@ -5,12 +5,10 @@
     <title>Picture</title>
 </head>
 <body>
-    {% load cloudinary %}
-
     <h2>Upload image</h2>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
-        {{ form }}
+        {{ form.as_p }}
         <div>
             <br>
             <input type="submit" value="upload image">

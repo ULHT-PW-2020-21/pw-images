@@ -6,5 +6,6 @@ app_name = 'media'
 urlpatterns = [
     path('', views.index, name='index'),
     path('upload/', views.upload, name='upload'),
+    path('picture/<int:picture_pk>', views.picture, name='picture'),
     path('delete/<int:picture_pk>', views.delete, name='delete'),
 ]

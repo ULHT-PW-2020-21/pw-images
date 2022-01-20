@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Pictures</title>
+    <title>Vela ligeira</title>
+    <style>
+        body {
+          background-color: DodgerBlue;
+        }
+        .pictures {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+        }
+        .pictures > a {
+            margin: 10px;
+        }
+    </style>
 </head>
 <body>
     <h1>Pictures</h1>
-    {% for picture in pictures %}
-        <img src="{{ picture.image.url }}" width="200px">
-        <h4>
-            {{ picture.name }}
-            (<a href="{% url 'media:delete' picture.pk %}">apagar</a>)
-        </h4>
-    {% endfor %}
+    <div class="pictures">
+        {% for picture in pictures %}
+        <a href="{% url 'media:picture' picture.pk %}" style="text-align: center">
+            <img src="{{ picture.image.url }}" width="300px">
+            <br>{{ picture.name }}<br>
+        </a>
+        {% endfor %}
+    </div>
     <a href="{% url 'media:upload' %}">Carregar imagem</a>
     
 </body>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Picture</title>
+    <style>
+        body {
+          background-color: DodgerBlue;
+        }
+        .picture {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .picture > * {
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>{{ picture.name }}</h1>
+    <div class="picture">
+        <img src="{{ picture.image.url }}" width="50%">
+    </div>
+    <a href="{% url 'media:index' %}">Lista</a>
+    <a href="{% url 'media:delete' picture.pk %}">Apagar</a>
+</body>
+</html>
