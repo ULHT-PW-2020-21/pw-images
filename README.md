@@ -1,4 +1,4 @@
-# Galeria de fotografias pw_images
+# Galeria de fotografias
 ### Descrição 
    * Web App em Django que permite inserir, listar e destruir imagens numa base de dados, através de operações CRUD.
    * Alojamento de fotografias em Cloudinary
