@@ -2,7 +2,7 @@
 ### Descrição 
    * Web App em Django que permite inserir, listar e destruir imagens numa base de dados, através de operações CRUD.
    * Alojamento de fotografias em Cloudinary
-   * Utilização do package django-cloudinary-storage
+   * Utilização do package django-cloudinary-storage ([video tutorial](https://www.youtube.com/watch?v=m5O4sSVbzjw))
    * use a pasta barcos com fotografias de barcos para carregar a sua aplicação
 
 ### Requisitos
