@@ -3,7 +3,8 @@
    * Web App em Django que permite inserir, listar e destruir imagens numa base de dados, através de operações CRUD.
    * Alojamento de fotografias em Cloudinary
    * Utilização do package django-cloudinary-storage ([video tutorial](https://www.youtube.com/watch?v=m5O4sSVbzjw))
-   * use a pasta barcos com fotografias de barcos para carregar a sua aplicação
+   * pasta barcos com fotografias de barcos para carregar a sua aplicação
+   * aplicação a correr no [Heroku](https://pictures-django-app.herokuapp.com/). PAra configurar a sua, siga os passos neste [link](https://github.com/ULHT-PW-2020-21/pw-deployment)
 
 ### Requisitos
    * na consola, clonar projeto usando comando `git clone https://github.com/ULHT-PW-2020-21/pw-images`
@@ -227,3 +228,5 @@ def delete(request, picture_pk):
     return redirect(reverse('media:index'))
 ```
 
+# Configuração para o ambiente de produção no Heroku
+   * Para configurar a aplicação para que corra no Heroku, siga os passos neste [link](https://github.com/ULHT-PW-2020-21/pw-deployment)
