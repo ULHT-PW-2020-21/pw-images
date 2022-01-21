@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Vela ligeira</title>
+    <title>Pictures</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
           background-color: DodgerBlue;
@@ -14,6 +15,9 @@
         }
         .pictures > a {
             margin: 10px;
+            color: white;
+            font-weight: bold;
+            text-decoration: none;
         }
     </style>
 </head>
@@ -22,12 +26,15 @@
     <div class="pictures">
         {% for picture in pictures %}
         <a href="{% url 'media:picture' picture.pk %}" style="text-align: center">
-            <img src="{{ picture.image.url }}" width="300px">
+            <img src="{{ picture.image.url }}" width="400px">
             <br>{{ picture.name }}<br>
         </a>
         {% endfor %}
     </div>
-    <a href="{% url 'media:upload' %}">Carregar imagem</a>
-    
+    <p style="text-align: center">
+        <br><br>
+        <a href="{% url 'media:upload' %}" class="btn btn-success" >Carregar imagem</a>
+    </p>
+
 </body>
 </html>

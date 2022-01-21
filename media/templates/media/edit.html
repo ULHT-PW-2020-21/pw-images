@@ -20,11 +20,19 @@
     </style>
 </head>
 <body>
-    <h1>{{ picture.name }}</h1>
+    <h2>Edit image</h2>
     <div class="picture">
         <img src="{{ picture.image.url }}" width="60%">
     </div>
-    <a href="{% url 'media:index' %}" class="btn btn-success" style="text-align: center">Lista</a>
-    <a href="{% url 'media:edit' picture.pk %}" class="btn btn-warning" style="text-align: center">Editar</a>
+    <br><br>
+    <form action="{% url 'media:edit' picture.pk %}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form.as_p }}
+
+        <br>
+        <a href="{% url 'media:index' %}" class="btn btn-warning" style="text-align: center">Cancelar</a>
+        <input type="submit" value="Gravar" class="btn btn-success" >
+        <a href="{% url 'media:delete' picture.pk %}" class="btn btn-danger" style="text-align: center">Apagar</a>
+    </form>
 </body>
 </html>

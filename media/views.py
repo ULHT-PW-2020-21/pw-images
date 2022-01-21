@@ -35,3 +35,14 @@ def picture(request, picture_pk):
     ctx = {'picture': picture}
     return render(request, 'media/picture.html', ctx)
 
+
+def edit(request, picture_pk):
+    picture = Picture.objects.get(pk=picture_pk)
+    form = PictureForm(request.POST or None, instance=picture)
+    if form.is_valid():
+        form.save()
+        return redirect('media:index')
+
+    ctx = {'form': form, 'picture': picture}
+    return render(request, 'media/edit.html', ctx)
+
