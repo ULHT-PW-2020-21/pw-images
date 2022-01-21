@@ -12,6 +12,11 @@
             background-color: DodgerBlue;
             text-align: center;
         }
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px 0px 0px 0px;
+        }
         .picture {
             display: flex;
             justify-content: center;
@@ -23,8 +28,9 @@
     </style>
 </head>
 <body>
-    <h2>Editar</h2>
+    <h1>Editar</h1>
     <div class="picture">
+        <p>{{ picture.image.name }}</p>
         <img src="{{ picture.image.url }}" width="60%">
     </div>
     <br><br>

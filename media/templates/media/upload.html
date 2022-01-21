@@ -10,11 +10,17 @@
             background-color: DodgerBlue;
             text-align: center;
         }
+        h1 {
+            text-align: center;
+            color: white;
+            padding: 20px 0px 0px 0px;
+        }
+
     </style>
     <title>Vela</title>
 </head>
 <body>
-    <h2>Upload image</h2>
+    <h1>Carregar fotografia</h1>
     <form method="post" enctype="multipart/form-data">
         {% csrf_token %}
         {{ form.as_p }}
