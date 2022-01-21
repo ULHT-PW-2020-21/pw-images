@@ -30,7 +30,6 @@
 <body>
     <h1>Editar</h1>
     <div class="picture">
-        <p>{{ picture.image.name }}</p>
         <img src="{{ picture.image.url }}" width="60%">
     </div>
     <br><br>
@@ -39,9 +38,9 @@
         {{ form.as_p }}
 
         <br>
-        <a href="{% url 'media:index' %}" class="btn btn-warning" style="text-align: center">Cancelar</a>
-        <input type="submit" value="Gravar" class="btn btn-success" >
-        <a href="{% url 'media:delete' picture.pk %}" class="btn btn-danger" style="text-align: center">Apagar</a>
+        <a href="{% url 'media:index' %}" class="btn btn-warning" style="text-align: center">Listar barcos</a>
+        <input type="submit" value="Gravar alterações" class="btn btn-success" >
+        <a href="{% url 'media:delete' picture.pk %}" class="btn btn-danger" style="text-align: center">Apagar fotografia</a>
     </form>
 </body>
 </html>
