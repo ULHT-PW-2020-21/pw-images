@@ -31,6 +31,14 @@
 </head>
 <body>
     <h1>Vela</h1>
+    <button id="goFS">Go fullscreen</button>
+    <script>
+      var goFS = document.getElementById("goFS");
+      goFS.addEventListener("click", function() {
+          document.body.requestFullscreen();
+      }, false);
+    </script>
+
     <div class="pictures">
         {% for picture in pictures %}
         <a href="{% url 'media:picture' picture.pk %}" style="text-align: center">

@@ -122,7 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.0/howto/static-files/
 
 STATIC_URL = '/media/static/'
-STATICFILES_DIRS = [str(BASE_DIR.joinpath('static'))]  # novo se a pasta static estiver na pasta da aplicação app, altere para str(BASE_DIR.joinpath('app/static'))
+STATICFILES_DIRS = [str(BASE_DIR.joinpath('/media/static'))]  # novo se a pasta static estiver na pasta da aplicação app, altere para str(BASE_DIR.joinpath('app/static'))
 STATIC_ROOT = str(BASE_DIR.joinpath('staticfiles'))   # novo
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'  # novo
 
