@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      {% load static %}
     <link rel="icon" href="{% static 'sailing.ico' %}" type="image/ico" sizes="16x16">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <style>
         body {
             background-color: DodgerBlue;
@@ -26,8 +27,8 @@
         {{ form.as_p }}
         <div>
             <br>
-            <a href="{% url 'media:index' %}" class="btn btn-warning" style="text-align: center">Cancelar</a>
-            <input type="submit" value="upload image">
+            <a href="{% url 'media:index' %}" class="btn btn-warning" style="text-align: center">Listar</a>
+            <input type="submit" value="Carregar fotografia" class="btn btn-success">
         </div>
     </form>
 </body>
