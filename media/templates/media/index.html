@@ -31,13 +31,13 @@
 </head>
 <body>
     <h1>Vela</h1>
-    <h4>Guarda e visualiza fotografias dos teus barcos de vela ligeira ⛵ preferidos!</h4>
+    <h4>Guarda e visualiza fotografias dos teus barcos de vela ligeira preferidos!</h4>
     <div class="pictures">
         {% for picture in pictures %}
         <a href="{% url 'media:picture' picture.pk %}" style="text-align: center">
-            {% if picture.image %}
-                <img src="{{ picture.image.url }}" width="300px">
-                <br>{{ picture.name }}<br>
+            {% if picture.imagem %}
+                <img src="{{ picture.imagem.url }}" width="300px">
+                <br>{{ picture.nome }}<br>
             {% endif %}
         </a>
         {% endfor %}
