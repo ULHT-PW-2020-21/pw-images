@@ -35,8 +35,10 @@
     <div class="pictures">
         {% for picture in pictures %}
         <a href="{% url 'media:picture' picture.pk %}" style="text-align: center">
-            <img src="{{ picture.image.url }}" width="300px">
-            <br>{{ picture.name }}<br>
+            {% if picture.image %}
+                <img src="{{ picture.image.url }}" width="300px">
+                <br>{{ picture.name }}<br>
+            {% endif %}
         </a>
         {% endfor %}
     </div>
