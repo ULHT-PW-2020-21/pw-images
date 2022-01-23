@@ -1,4 +1,5 @@
 # Galeria de fotografias
+https://pictures-django-app.herokuapp.com/
 ### Descrição 
    * Web App em Django que permite inserir, listar e destruir imagens numa base de dados, através de operações CRUD.
    * Alojamento de fotografias em Cloudinary
@@ -14,6 +15,9 @@
    * lançar a aplicação com comando `python manage.py runserver`
 
 # Preparativos
+
+descreve-se aqui uma implementação básica. A versão implementada tem mais detalhes que depois pode implementar numa segunda fase.
+
 ### Scripts no terminal
 ```console
 mkdir project_pictures
