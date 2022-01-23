@@ -8,7 +8,6 @@ from .forms import PictureForm
 # Create your views here.
 def index(request):
     pictures = Picture.objects.all()
-    print(pictures)
     ctx = {'pictures': pictures}
     return render(request, 'media/index.html', ctx)
 
