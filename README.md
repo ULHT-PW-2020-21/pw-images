@@ -27,7 +27,7 @@ venv\Scripts\activate
 pip install django
 django-admin startproject config .
 py manage.py startapp pictures
-pip install django-cloudinary-storage
+pip install django-cloudinary-storage     # ou pipenv install django-cloudinary-storage
 pip install Pillow
 pip > freeze requirements.txt 
 ```
