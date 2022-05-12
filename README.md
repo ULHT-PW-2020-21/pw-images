@@ -19,6 +19,24 @@ https://pictures-django-app.herokuapp.com/
 descreve-se aqui uma implementação básica. A versão implementada tem mais detalhes que depois pode implementar numa segunda fase.
 
 ### Scripts no terminal
+
+#### usando pipenv
+
+```console
+mkdir project_pictures
+cd project_pictures
+pipenv install django
+django-admin startproject config .
+py manage.py startapp pictures
+pipenv install django-cloudinary-storage     # ou pipenv install django-cloudinary-storage
+pipenv install Pillow
+```
+notas:
+* usamos o package [django-cloudinary-storage](https://github.com/klis87/django-cloudinary-storage) que permite usar ImageField que guardam a imagem em Cloudinary
+* Pillow permite usar ImageField
+* guarda-se em requirements.txt os packages instalados em [venv](https://docs.python.org/3/tutorial/venv.html). 
+
+#### usando venv:
 ```console
 mkdir project_pictures
 cd project_pictures
@@ -31,11 +49,11 @@ pip install django-cloudinary-storage     # ou pipenv install django-cloudinary-
 pip install Pillow
 pip > freeze requirements.txt 
 ```
-
 notas:
-* usamos package [django-cloudinary-storage](https://github.com/klis87/django-cloudinary-storage) que permite usar ImageField que guardam a imagem em Cloudinary
+* usamos o package [django-cloudinary-storage](https://github.com/klis87/django-cloudinary-storage) que permite usar ImageField que guardam a imagem em Cloudinary
 * Pillow permite usar ImageField
 * guarda-se em requirements.txt os packages instalados em [venv](https://docs.python.org/3/tutorial/venv.html). 
+
 
 ### Criação de conta em [cloudinary.com](https://cloudinary.com/)
 * criar conta em cloudinary 
