@@ -20,6 +20,8 @@ descreve-se aqui uma implementação básica. A versão implementada tem mais de
 
 ### Scripts no terminal
 
+* deve instalar o modulo `pipenv install django-cloudinary-storage`
+
 #### usando pipenv
 
 ```console
@@ -28,7 +30,7 @@ cd project_pictures
 pipenv install django
 django-admin startproject config .
 py manage.py startapp pictures
-pipenv install django-cloudinary-storage     # ou pipenv install django-cloudinary-storage
+pipenv install django-cloudinary-storage
 pipenv install Pillow
 ```
 notas:
