@@ -133,7 +133,7 @@ def index(request):
 
 ### index.html
 * criamos pasta templates/media/
-* criamos ficheiro index.html, com ciclo para incluir todas as fotos e seus nomes
+* criamos ficheiro index.html, com ciclo para incluir todas as fotos e seus nomes. Atenção, deve incluir a extensão **`.url`**
 ```html
 <body>
     <h1>Pictures</h1>
