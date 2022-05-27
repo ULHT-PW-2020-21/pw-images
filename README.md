@@ -38,6 +38,8 @@ notas:
 * Pillow permite usar ImageField
 * guarda-se em requirements.txt os packages instalados em [venv](https://docs.python.org/3/tutorial/venv.html). 
 
+<!--
+
 #### usando venv:
 ```console
 mkdir project_pictures
@@ -56,6 +58,8 @@ notas:
 * Pillow permite usar ImageField
 * guarda-se em requirements.txt os packages instalados em [venv](https://docs.python.org/3/tutorial/venv.html). 
 
+
+-->
 
 ### Criação de conta em [cloudinary.com](https://cloudinary.com/)
 * criar conta em cloudinary 
